@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Welcome to Board</h1>
+<br>
+<p>Click <a href="/logout">here</a> to logout.</p>
+<br><br>
+<h3>Posts:</h3>
+{% for post in posts %}
+	<strong>Pin</strong>{{ post.pin }}
+	<strong>Current</strong>{{ post.current }}
+	<strong>Fault</strong>{{ post.fault }}
+<br>
+{% endfor %}			
+
+{% endblock %}
